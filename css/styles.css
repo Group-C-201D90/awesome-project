@@ -73,3 +73,21 @@ footer {
 #filler-text {
   padding-right: 10px;
 }
+
+.bioName {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.bioDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
