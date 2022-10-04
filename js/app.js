@@ -1,7 +1,7 @@
 // GLOBALS
 const storyDisplay = document.getElementById('storyDisplay');
 let color = ['red', 'green', 'blue'];
-
+let genreindex;
 
 
 //**Place Holders!//
@@ -11,10 +11,8 @@ let userDislike = 'userDislike';
 //Placeholder Selectors
 
 
-function genreSelection() {
-  let genreSelection = genretypes[0];
-  console.log(genreSelection);
-};
+ 
+
 
 //**End of Place Holders
 
@@ -47,22 +45,18 @@ function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, g
   this.color = color[i];
 }
 //Story Definer
-new Story(genretypes[i[0]], userName, noun1, genretypes[i[1]], genretypes[i[2]], genretypes[i[3]], genretypes[i[4]], genretypes[i[5]], genretypes[i[6]]);
-
-
-console.log(story.genre);
+new Story(genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1], genretypes[genreindex][2], genretypes[genreindex][3], genretypes[genreindex][4], genretypes[genreindex][5], genretypes[genreindex][6]);
 
 //HELPER FUNCTIONS
 
 //**Story Element Renderer
 
 
-function storyRender() {
+function storyRender(storyindex){
   const wyos = document.getElementById("wyos");
   wyos.remove();
-  let i = genreSelection;
   let storyContent = document.createElement('p');
-  storyContent.textContent = genretypes[i];
+  storyContent.textContent = genretypes[storyindex][0];
   storyDisplay.appendChild(storyContent);
 
 }
@@ -70,17 +64,19 @@ function storyRender() {
 //**Selectors**//
 function genreSelect() {
 
-  if (genreSelection === horror) {
-    genretypes = 0;
+  if (genreSelection === 'horror') {
+    genreindex = 0;
   }
-  else if (genreSelection === fantasy) {
-    genretypes = 1;
+  else if (genreSelection === 'fantasy') {
+    genreindex = 1;
   }
-  else if (genreSelection === scifi) {
-    genretypes = 2;
+  else if (genreSelection === 'scifi') {
+    genreindex = 2;
   }
 
 }
+
+let genreSelection = genretypes[0];
 
 function genreSelection(){
 
