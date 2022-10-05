@@ -240,14 +240,19 @@ align-items: center;
 justify-content: center;
 }
 
-.bioDiv {
-  display: flex;
+.imgDiv {
   align-items: center;
-  flex-direction: column;
+  width: 250px;
+    margin: 30px 30px 30px 0;
+    float: left;
+}
+.bioDiv {
+  font-size: 30px;
+  color:white;
+  display: inline;
 }
 
-.imgDiv {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+.pic {
+  height: 8vw;
+  width: 8vw;
 }
