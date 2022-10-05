@@ -17,11 +17,11 @@ function handleImageClicked(event) {
   let clickedImg = event.target.alt;
 
   if (imageArr[0] === clickedImg) {
-    let genreindex = 0;  // horror
+    let genreindex = 0; // horror
   } else if(imageArr[1] === clickedImg) {
-    let genreindex = 1;  // fantasy
+    let genreindex = 1; // fantasy
   } else if (imageArr[2] === clickedImg) {
-    let genreindex = 2;  // sci-fi
+    let genreindex = 2; // sci-fi
   }
 
 }
