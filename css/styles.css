@@ -33,12 +33,18 @@ header {
 }
 
 #newUser {
-  background-color: #003049;
+  /* background-color: #003049; */
   color: white;
   display:flex;
   justify-content: center;
   margin-top: 10vw;
   list-style: none;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #enterStyle {display: flex;
@@ -141,14 +147,10 @@ td {
   justify-content: center;
 }
 
+
 .styling, a {
   font-family: Sacramento;
 }
-
-#wyos {
-  color: white;
-}
-
 
 a {
   text-decoration: none;
