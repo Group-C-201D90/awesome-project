@@ -13,11 +13,11 @@ function Profile(name, age, pronoun) {
 
 function handleProfileSubmit(event) {
   event.preventDefault();
-  
+
   let name = event.target.userName.value;
   let age = event.target.userAge.value;
   let pronoun = event.target.pronoun.value;
-  
+
   let newProfile = new Profile(name, age, pronoun);
   console.log(userProfiles);
 }
