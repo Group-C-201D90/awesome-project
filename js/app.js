@@ -33,19 +33,12 @@ let horror = [content, genNoun1, genNoun2, genNoun3, genPlace1, genAdj1, genVerb
 genretypes.push(horror);
 //!-----//
 
-
-
-
-
 console.log();
 
 
 //**End of Place Holders
 
 //STORAGE
-
-
-
 
 
 
@@ -66,6 +59,8 @@ function Profile(name, age, pronoun) {
   userProfiles.push(this);
 
 }
+
+//**Profile Submission**//
 function handleProfileSubmit(event) {
   event.preventDefault();
 
@@ -77,6 +72,22 @@ function handleProfileSubmit(event) {
   console.log(userProfiles);
 
 }
+//**Story Submission**//
+
+function storyPara(event) {
+  event.preventDefault();
+
+  let storyName = event.target.storyName.value;
+  let noun1 = event.target.noun1.value;
+  let adj1 = event.target.adj1.value;
+  let prop1 = event.target.proper.value;
+
+  new StoryPara(storyName, noun1, adj1, prop1);
+
+  console.log(userProfiles);
+
+}
+
 
 
 
@@ -98,6 +109,8 @@ function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, a
   this.color = color[colorindex];
 //This pushes it into the story array for later use.
   bookShelf.push(this);
+
+
 }
 //Story Definer
 new Story(genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1], genretypes[genreindex][2], genretypes[genreindex][3], adj1, genretypes[genreindex][4], genretypes[genreindex][5], genretypes[genreindex][6]);
@@ -107,9 +120,14 @@ new Story(genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1],
 //**Story Element Renderer
 
 
-function storyRender(storyindex) {
+function storyRender(selectindex) {
+
   const wyos = document.getElementById('wyos');
   wyos.remove();
+  //Adds the title picked from form
+  let storyName = document.createElementById('h2');
+  storyDisplay.appendChild(storyName)
+  //Adds Content of the Story
   let storyContent = document.createElement('p');
   storyContent.textContent = genretypes[storyindex][0];
   storyDisplay.appendChild(storyContent);
@@ -155,8 +173,16 @@ function genVerb1Select(){
 
 }
 
-//**Option Render **//
+//**Story Choices Render **//
 
+function selectRender(selectindex){
+  const display = get document.getElementById();
+
+  let selbarContent = document.createElementbyId('form');
+  selbarContent.appendChild(selbarContent);
+  var form = 
+
+}
 
 
 
@@ -178,5 +204,9 @@ function genVerb1Select(){
 // noun1select();
 
 myForm.addEventListener('submit', handleProfileSubmit);
+myForm.addEventListener('storyPara', handleProfileSubmit);
+
+
+
 
 storyRender(genreindex);
