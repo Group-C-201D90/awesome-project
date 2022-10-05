@@ -45,13 +45,14 @@ header {
   padding: 10px;
 }
 
-/* fieldset {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
+#FANTASY:hover, #SCI-FI:hover, #HORROR:hover {
+  transform: scale(1.01,1.01);
+  box-shadow: 0 0 50px black;
+}
+#FANTASY:active, #SCI-FI:active, #HORROR:active {
+  transform: scale(0.7,0.7);
+}
 
-} */
 
 .label-div {
   padding: 20px;
