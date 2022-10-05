@@ -84,6 +84,41 @@ h2  {display:flex;
 }
 
 
+/* index page added css */
+
+#canvas-section, #table-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#canvas-div {
+  display: flex;
+  align-items: center;
+  justify-content: column;
+  background-color: darkgray;
+  width: 60%;
+}
+
+.table-h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin-top: 20px;
+}
+
+.table-div {
+  width: 50%;
+  background-color: darkgray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+
 
 
 
