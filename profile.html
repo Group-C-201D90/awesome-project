@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/styles.css">
   <title>User Profile</title>
@@ -11,9 +11,9 @@
 <body>
 <header>
   <div id="logo">
-    <img src="https://place-hold.it/50x50/ddd">
+    <img src="img/storeyteller.jpg" width="150px" height="100px">
+    <h1 class="styling">Story Not Story</h1>
   </div>
-  <h1>Storybook Generator</h1>
   <nav>
     <a href="">Home</a>
     <a href="">Story</a>
@@ -25,23 +25,28 @@
       <fieldset>
 
         <label id="prof">Create a Writer's Profile</label><br>
-        <label class="newUser">Enter Name:</label>
-        <input class="newUser" type="text" name="userName">
-        <label class="newUser">Enter Age:</label>
-        <input class="newUser" type="text" name="userAge">
-        <select name="pronoun" id="pronoun">
-          <option value="default">Select a pronoun</option>
-          <option value="his">he/him</option>
-          <option value="she">she/her</option>
-          <option value="they">they/them</option>
-          <option value="name">Use my Name!</option>
-        </select>
 
+        <div class="label-div">
+          <label class="newUser">Enter Name:</label>
+          <input class="newUser type="text" name="userName">
+        </div>
+        <div class="label-div">
+          <label class="newUser">Enter Age: &nbsp&nbsp</label>
+          <input class="newUser type="text" name="userAge">
+        </div>
+        <div class="label-div">
+          <select name="pronoun" id="pronoun">
+            <option value="default">Select a pronoun</option>
+            <option value="his">he/him</option>
+            <option value="she">she/her</option>
+            <option value="they">they/them</option>
+            <option value="name">Use my Name!</option>
+          </select>
+        </div>    
 
-
-        <li class="button">
+        <div class="button">
           <button id="submit" type="submit">Submit</button>
-        </li>
+        </div>
       </fieldset>
 
     </form>
@@ -54,7 +59,7 @@
   <article id="genre">
 <img id="FANTASY" class="genreicon" src="img/FANTASY.jpg" alt="FANTASY" width="200px" height="200px">
 <img id="SCI-FI" class="genreicon"  src="img/SCI-FI.jpg" alt="SCI-FI" width="200px" height="200px">
-<img id="HORROR" class="genreicon" src="img/HORROR.jpg" alt="HORROR" width="200px" height="200px">
+<img id="HORROR" class="genreicon" src="img/4.jpg" alt="HORROR" width="200px" height="200px">
 <!-- There will be more genres we are striving for functionality before choices. -->
   </article>
 
@@ -63,7 +68,7 @@
       <p> Contact Us for More Updates</p>
     </div>
     <div id="authors">
-      <h2> Project &copy</h2>
+      <h2 class="styling"> Project &copy</h2>
       <div class="circle"></div>
       <p>Nicholas Seidel</p>
       <div class="circle"></div>
@@ -74,8 +79,9 @@
       <p>Nerissa Leynes</p>
     </div>
     <div id="subscribe-div">
-      <p id="filler-text">Please Don't forget to Subscribe!</p>
-      <button id="subscribe-btn">Subscribe</button>
+      <p id="filler-text">Subscribe Now!</p>
+      <input id="email-input" placeholder='Enter Your Email' />
+      <button id="email-btn">Sign-Up</button>
     </div>
   </footer>
   <script src="js/app.js"></script>
