@@ -33,18 +33,27 @@ header {
 }
 
 #newUser {
-  /* background-color: #003049; */
+  background-color: #003049;
   color: white;
   display:flex;
   justify-content: center;
   margin-top: 10vw;
   list-style: none;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
 }
 
-fieldset {
+/* fieldset {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
+
+} */
+
+.label-div {
+  padding: 20px;
 }
 
 #enterStyle {display: flex;
