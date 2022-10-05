@@ -247,6 +247,8 @@ justify-content: center;
     float: left;
 }
 .bioDiv {
+  font-size: 30px;
+  color:white;
   display: inline;
 }
 
