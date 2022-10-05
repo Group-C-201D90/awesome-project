@@ -2,11 +2,16 @@ body {
   background-image: url("/img/book.jpg");
   font-family: raleway;
   margin: auto;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 header {
   width: 95%;
-  height: 10vh;
+  height: 12vh;
   background-color: #003049;
   font-size: 2vw;
   display:flex;
@@ -24,16 +29,48 @@ header {
   flex-direction:row;
   align-items:center;
   margin-left:30px;
+  padding: 20px;
 }
 
 #newUser {
-  background-color: #003049;
+  /* background-color: #003049; */
+  background-color: hsla(201, 100%, 14%, 0.6);
   color: white;
   display:flex;
   justify-content: center;
   margin-top: 10vw;
   list-style: none;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
 }
+
+#FANTASY:hover, #SCI-FI:hover, #HORROR:hover {
+  transform: scale(1.01,1.01);
+  box-shadow: 0 0 50px black;
+}
+#FANTASY:active, #SCI-FI:active, #HORROR:active {
+  transform: scale(0.7,0.7);
+}
+
+
+.label-div {
+  padding: 20px;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2); 
+  background-color: rgb(171, 169, 212);
+  color: white;
+}
+
+button:active {
+   transform: scale(1,1);
+}
+
+
+
+
 
 #enterStyle {display: flex;
   justify-content: center;
@@ -135,17 +172,20 @@ td {
   justify-content: center;
 }
 
+
 .styling, a {
   font-family: Sacramento;
 }
-
-
 
 a {
   text-decoration: none;
   padding-right: 50px;
   color:white;
   margin-right: 25px;
+}
+
+a:hover {
+  color: #de6288;
 }
 
 footer {
@@ -156,7 +196,7 @@ footer {
   bottom: 0px;
   width: 100%;
   margin-top: 350px;
-  padding: 20px;
+  padding: 10px;
   background-color: #003049;
 
 }
@@ -183,6 +223,10 @@ footer {
   align-items: center;
   flex-direction: row;
   margin-right: 50px;
+  margin-left: 10px;
+}
+
+#email-btn {
   margin-left: 10px;
 }
 
