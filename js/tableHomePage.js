@@ -13,3 +13,25 @@
 //     table.appendChild(trElem);
 //   }
 // }
+
+
+Story.prototype.tableRender = function() {
+  let table = document.getElementById('bookshelf');
+  let trElem = document.createElement('tr');
+  let trElem2 = document.createElement('tr');
+
+
+  for (let i = 0; i < bookshelf.length; i++) {
+    let thElem = document.createElement('th');
+    let tdElem = document.createElement('td');
+
+    thElem.textContent = 'Username';
+    trElem.appendChild(thElem);
+
+    tdElem.textContent = this.user;
+    trElem2.appendChild(tdElem);
+
+    table.appendChild(trElem);
+    table.appendChild(trElem2);
+  }
+};
