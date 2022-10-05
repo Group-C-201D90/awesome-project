@@ -14,7 +14,14 @@ function ImageGenre(name, fileExtension = 'jpg') {
   imageArr.push(this);
 }
 
-// // events for image clicked
-// function handleImageClicked(event) {
-//   console.dir(event.target);
-// }
+// events for image clicked
+function handleImageClicked(event) {
+  console.dir(event.target);
+  let clickedImg = event.target.alt;
+
+  for (let i = 0; i < imageArr.length; i++) {
+    if (imageArr[i].name === clickedImg) {
+      
+    }
+  }
+}
