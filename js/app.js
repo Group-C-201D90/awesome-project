@@ -2,11 +2,13 @@
 const storyDisplay = document.getElementById('storyDisplay');
 let colorindex = ['red', 'green', 'blue'];
 let genretypes = [];
+let userProfiles = [];
 let genreindex = 0;
-
+let myForm = document.getElementById('newUser');
+let bookShelf = [];
 
 //**Place Holders!//
-let userName = 'profileName';
+let userName = 'newProfile';
 let userDislike = 'userDislike';
 let noun1 = 'cheese';
 let adj1 = 'tasty';
@@ -52,10 +54,37 @@ console.log();
 
 //CONSTRUCTORS
 
+//**Profile **/
+
+
+
+function Profile(name, age, pronoun) {
+  this.name = name;
+  this.age = age;
+  this.pronoun = pronoun;
+
+  userProfiles.push(this);
+
+}
+function handleProfileSubmit(event) {
+  event.preventDefault();
+
+  let name = event.target.userName.value;
+  let age = event.target.userAge.value;
+  let pronoun = event.target.pronoun.value;
+
+  new Profile(name, age, pronoun);
+  console.log(userProfiles);
+
+}
+
+
+
+
 
 //**Stories**//
 
-function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, genVerb1, color) {
+function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, adj1, genVerb1, color) {
   this.baseText = baseText;
   this.user = user;
   this.noun1 = noun1;
@@ -67,16 +96,18 @@ function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, g
   this.genVerb1 = genVerb1;
   this.name1 = name1;
   this.color = color[colorindex];
+//This pushes it into the story array for later use.
+  bookShelf.push(this);
 }
 //Story Definer
-new Story(genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1], genretypes[genreindex][2], genretypes[genreindex][3], genretypes[genreindex][4], genretypes[genreindex][5], genretypes[genreindex][6]);
+new Story(genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1], genretypes[genreindex][2], genretypes[genreindex][3], adj1, genretypes[genreindex][4], genretypes[genreindex][5], genretypes[genreindex][6]);
 
 //HELPER FUNCTIONS
 
 //**Story Element Renderer
 
 
-function storyRender(storyindex){
+function storyRender(storyindex) {
   const wyos = document.getElementById('wyos');
   wyos.remove();
   let storyContent = document.createElement('p');
@@ -90,17 +121,43 @@ function storyRender(storyindex){
 
 //**Selector Constructors**//
 
-// function noun1select(){
-// if  (genreindex = 0) = ['alien', 'cyborg', 'humanoid', 'martian', 'android', 'robot', 'clones'];
-// if else (genreindex = 1) = [ 'time machine', 'genie bottle', 'paper-boat'];
+function genNoun1Select(){
 
-// if else = (genreindex = 2) = ['alien', 'cyborg', 'humanoid', 'martian', 'android', 'robot', 'clones']
-// };
+if (genreindex = 0 ){ ['vampire', 'mummy', 'zombie', 'slime', 'werewolf', 'fog', 'doll', 'demon'];}
 
-// function noungenNoun(){
-
-
+// else if (genreindex = 1){[ 'time machine', 'genie bottle', 'paper-boat'];
 // }
+
+// else if = (genreindex = 2)['alien', 'cyborg', 'humanoid', 'martian', 'android', 'robot', 'clones']
+}
+
+function genNoun2Select(){
+
+  if (genreindex === 0) ['coffin', 'cave', 'tree', 'hut', 'mansion', 'jar', 'sarcophagus', 'graveyard', 'swamp'];
+//!! Needs to be filled in.
+
+
+}
+
+
+function genNoun3Select(){
+  if (genreindex === 0) ['blood', 'dirt', 'goo', 'hair', 'the dark', 'garlic', 'socializing'];
+
+}
+
+function genPlace1Select(){
+  if (genreindex === 0)['mansion', 'giant pumpkin', 'swamp'];
+
+}
+
+function genVerb1Select(){
+  if (genreindex === 0)['sprint', 'crawl','cry' ];
+
+}
+
+//**Option Render **//
+
+
 
 
 
@@ -119,4 +176,7 @@ function storyRender(storyindex){
 
 //Invocations for Testing  //
 // noun1select();
+
+myForm.addEventListener('submit', handleProfileSubmit);
+
 storyRender(genreindex);
