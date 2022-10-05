@@ -1,5 +1,5 @@
 body {
-  background-color: #b7b9ba;
+  background-image: url("/img/book.jpg");
   font-family: raleway;
   margin: auto;
 }
@@ -109,6 +109,17 @@ h2  {display:flex;
   margin-top: 20px;
 }
 
+/* added table-section and td styling */
+#table-section {
+  width: 70%;
+  padding: 50px;
+  margin: auto;
+}
+
+td {
+  width: 20%;
+}
+
 .table-div {
   width: 50%;
   background-color: darkgray;
@@ -123,7 +134,6 @@ h2  {display:flex;
   display: flex;
   justify-content: center;
 }
-
 
 
 
