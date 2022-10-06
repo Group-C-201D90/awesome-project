@@ -71,7 +71,7 @@ function handleProfileSubmit(event) {
 
   new Profile(name, age, pronoun);
   console.log(userProfiles);
-  
+
 }
 
 
@@ -87,11 +87,11 @@ function storyPara(event) {
   let name1 = event.target.name1.value;
   let color = event.target.color.value;
 
-  
+
 
   let createdStory = new Story(storyName, color, genretypes[genreindex][0], userName, noun1, genretypes[genreindex][1], genretypes[genreindex][2], genretypes[genreindex][3], adj1, genretypes[genreindex][4], name1, genretypes[genreindex][5], genretypes[genreindex][6]);
   console.log(bookShelf);
-  
+
   storyRender(createdStory);
 }
 
@@ -121,7 +121,7 @@ function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, a
   //This pushes it into the story array for later use.
   bookShelf.push(this);
   console.log(bookShelf);
-  
+
 }
 //Story Definer
 
