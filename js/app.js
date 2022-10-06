@@ -120,7 +120,9 @@ function Story(baseText, user, noun1, genNoun1, genNoun2, genNoun3, genPlace1, a
 
   //This pushes it into the story array for later use.
   bookShelf.push(this);
+  lsBook();
 }
+
 //Story Definer
 
 
@@ -193,26 +195,29 @@ function storyRender(story) {
 
 
 //LOCAL STORAGE//
+function lsBook() {
+  let stringBooks = JSON.stringify(bookShelf);
+  localStorage.setItem('storedBooks', stringBooks);
+  //Book Extracted//
+  let recallBook = localStorage.getItem('storedBooks');
+  console.log('storedBooks');
 
-let stringBooks = JSON.stringify(bookShelf);
-localStorage.setItem('storedBooks', stringBooks);
-//Book Extracted//
-let recallBook = localStorage.getItem('storedBooks');
-console.log('storedBooks');
+  //String --> Object//
+  let makeBook = JSON.parse(recallBook);
 
-//String --> Object//
-let makeBook = JSON.parse(recallBook);
+  if (recallBook) {
 
-if (recallBook) {
+    bookShelf = makeBook;
+  }
 
-  bookShelf = makeBook;
+  console.log(stringBooks);
 }
 
 
 
 
 
-console.log(stringBooks);
+
 
 
 
@@ -226,6 +231,7 @@ console.log(stringBooks);
 // myForm.addEventListener('submit', handleProfileSubmit);
 
 storyForm.addEventListener('submit', storyPara);
+
 
 
 
