@@ -3,17 +3,16 @@ const storyDisplay = document.getElementById('storyDisplay');
 const storyForm = document.getElementById('storyForm');
 let genretypes = [];
 let userProfiles = [];
-
+let userName = [];
 let myForm = document.getElementById('newUser');
-export let bookShelf = [];
+let bookShelf = [];
 
 //*Story Element Holder*//
 
 
 
 //**Place Holders!//
-let userName = 'newProfile';
-let userDislike = 'userDislike';
+let userDislike = 'stuff';
 let genNoun1 = 'person';
 let genNoun2 = 'Pumpkin';
 let genNoun3 = 'Knife';
@@ -56,9 +55,8 @@ function Profile(name, age, pronoun) {
   this.name = name;
   this.age = age;
   this.pronoun = pronoun;
-
   userProfiles.push(this);
-
+  userName.push(this.name);
 }
 
 //**Profile Submission**//
@@ -71,7 +69,7 @@ function handleProfileSubmit(event) {
 
   new Profile(name, age, pronoun);
   console.log(userProfiles);
-
+  lsProfile();
 }
 
 
@@ -136,9 +134,9 @@ function storyRender(story) {
   const wyos = document.getElementById('wyos');
   wyos.remove();
   //Adds the title picked from form
-  let storyName = document.createElement('h2');
-  storyName.textContent = story.storyName;
-  storyDisplay.appendChild(storyName);
+  // let storyName = document.createElement('h2');
+  // storyName.textContent = story.storyName;
+  // storyDisplay.appendChild(storyName);
   //Adds Content of the Story
   let storyContent = document.createElement('p');
   storyContent.textContent = story.content;
@@ -195,44 +193,52 @@ function storyRender(story) {
 
 
 //LOCAL STORAGE//
+
+//BookShelf Local Storage//
 function lsBook() {
   let stringBooks = JSON.stringify(bookShelf);
   localStorage.setItem('storedBooks', stringBooks);
-  //Book Extracted//
-  let recallBook = localStorage.getItem('storedBooks');
   console.log('storedBooks');
 
   //String --> Object//
-  let makeBook = JSON.parse(recallBook);
 
-  if (recallBook) {
-
-    bookShelf = makeBook;
-  }
 
   console.log(stringBooks);
 }
 
+//Profile Local Storage//
 
+function lsProfile() {
+  //Store arrays into strings//
+  let stringProfiles = JSON.stringify(userProfiles);
+  localStorage.setItem('storedProfiles', stringProfiles);
+}
 
+//Data Extraction//
 
+function loadstorage() {
+  let recallBook = localStorage.getItem('storedBooks');
+  let recallProfile = localStorage.getItem('storedProfiles');
+  console.log(recallBook);
+  console.log(recallProfile);
+  if (recallBook) {
+    let makeBook = JSON.parse(recallBook);
 
+    bookShelf = makeBook;
+  }
+  if (recallProfile) {
+    let makeProfile = JSON.parse(recallProfile);
 
-
-
-
-
-
+    userProfiles = makeProfile;
+  }
+}
 
 
 //Invocations for Testing  //
 // noun1select();
 
-// myForm.addEventListener('submit', handleProfileSubmit);
+myForm.addEventListener('submit', handleProfileSubmit);
 
 storyForm.addEventListener('submit', storyPara);
 
-
-
-
-
+loadstorage();
