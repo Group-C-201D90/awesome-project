@@ -15,13 +15,13 @@
 // }
 
 
-Story.prototype.tableRender = function() {
+
   let table = document.getElementById('bookshelf');
   let trElem = document.createElement('tr');
   let trElem2 = document.createElement('tr');
 
 
-  for (let i = 0; i < bookshelf.length; i++) {
+  for (let i = 0; i < bookShelf.length; i++) {
     let thElem = document.createElement('th');
     let tdElem = document.createElement('td');
 
@@ -33,5 +33,4 @@ Story.prototype.tableRender = function() {
 
     table.appendChild(trElem);
     table.appendChild(trElem2);
-  }
-};
+    
