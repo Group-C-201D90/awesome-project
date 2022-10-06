@@ -75,7 +75,7 @@ function handleProfileSubmit(event) {
 
   new Profile(name, age, pronoun);
   console.log(userProfiles);
-
+  
 }
 
 
