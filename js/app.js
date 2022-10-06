@@ -3,7 +3,6 @@ const storyDisplay = document.getElementById('storyDisplay');
 const storyForm = document.getElementById('storyForm');
 let genretypes = [];
 let userProfiles = [];
-
 let myForm = document.getElementById('newUser');
 export let bookShelf = [];
 
@@ -213,6 +212,15 @@ function lsBook() {
   console.log(stringBooks);
 }
 
+
+function profile(){
+
+
+
+
+
+
+}
 
 
 

@@ -1,4 +1,4 @@
-import {bookShelf} from '/js/app.js';
+import { bookShelf } from '/js/app.js';
 
 // function tableRender(storyindex){
 //   let table = document.getElementById('bookshelf');
@@ -18,21 +18,22 @@ import {bookShelf} from '/js/app.js';
 
 
 
-  let table = document.getElementById('bookshelf');
-  let trElem = document.createElement('tr');
-  let trElem2 = document.createElement('tr');
+let table = document.getElementById('bookshelf');
+let trElem = document.createElement('tr');
+let trElem2 = document.createElement('tr');
 
 
-  for (let i = 0; i < bookShelf.length; i++) {
-    let thElem = document.createElement('th');
-    let tdElem = document.createElement('td');
+for (let i = 0; i < bookShelf.length; i++) {}
+  let thElem = document.createElement('th');
+  let tdElem = document.createElement('td');
 
-    thElem.textContent = 'Username';
-    trElem.appendChild(thElem);
+  thElem.textContent = 'Username';
+  bookShelf.appendChild.thElem;
+  trElem.appendChild(thElem);
 
-    tdElem.textContent = this.user;
-    trElem2.appendChild(tdElem);
+  tdElem.textContent = this.user;
+  trElem2.appendChild(tdElem);
 
-    table.appendChild(trElem);
-    table.appendChild(trElem2);
-    
+  table.appendChild(trElem);
+  table.appendChild(trElem2);
+};
