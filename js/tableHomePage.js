@@ -1,3 +1,5 @@
+import {bookShelf} from '/js/app.js';
+
 // function tableRender(storyindex){
 //   let table = document.getElementById('bookshelf');
 //   // wyos.remove();

@@ -5,7 +5,7 @@ let genretypes = [];
 let userProfiles = [];
 
 let myForm = document.getElementById('newUser');
-let bookShelf = [];
+export let bookShelf = [];
 
 //*Story Element Holder*//
 
