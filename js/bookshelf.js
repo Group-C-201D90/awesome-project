@@ -16,11 +16,11 @@ for (let i = 0; i < bookShelf.length; i++) {
   let thElem = document.createElement('th');
   let tdElem = document.createElement('td');
 
+  tdElem.textContent = bookShelf[i].baseText;
+  trElem.appendChild(tdElem);
+  
   thElem.textContent = 'User';
-  trElem.appendChild(thElem);
-
-  tdElem.textContent = userProfiles[i].name;
-  trElem2.appendChild(tdElem);
+  trElem2.appendChild(thElem);
 
   table.appendChild(trElem);
   table.appendChild(trElem2);
