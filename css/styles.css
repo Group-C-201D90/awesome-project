@@ -1,0 +1,325 @@
+body {
+  background-image: url("../img/background.jpg");
+  font-family: raleway;
+  margin: auto;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+header {
+  width: 95%;
+  height: 12vh;
+  background-color: #003049;
+  font-size: 2vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 30px;
+  padding-left: 120px;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+}
+
+
+#logo{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-left:30px;
+  padding: 20px;
+}
+
+#h2-section {
+  width: 60%;
+  margin: auto;
+  padding: 150px;
+}
+
+#wyos {
+  width: inherit;
+  font-weight: bold;
+  margin: auto;
+
+}
+
+#newUser, #selbar {
+  /* background-color: #003049; */
+  background-color: hsla(201, 100%, 14%, 0.6);
+  color: white;
+  display:flex;
+  justify-content: center;
+  margin-top: 10vw;
+  list-style: none;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+}
+
+#selbar {
+  padding: 10px;
+}
+
+#FANTASY:hover, #SCI-FI:hover, #HORROR:hover {
+  transform: scale(1.01,1.01);
+  box-shadow: 0 0 50px black;
+}
+#FANTASY:active, #SCI-FI:active, #HORROR:active {
+  transform: scale(0.7,0.7);
+}
+
+
+.label-div {
+  padding: 20px;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2); 
+  background-color: rgb(171, 169, 212);
+  color: white;
+}
+
+button:active {
+   transform: scale(1,1);
+}
+
+
+
+
+
+#enterStyle {display: flex;
+  justify-content: center;
+
+}
+
+#prof {display:flex;
+  flex-direction:row;
+justify-content: center;
+font-size: 2vw;
+
+
+  
+}
+
+.button {display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-top:1vw;
+  background-color: #b7b9ba;
+  border-radius: 20px;
+  border-style: none;
+  margin-bottom: 1vw;
+
+
+
+}
+h2  {display:flex;
+  justify-content: center;
+  font-size: 3vw;
+  margin-top: 5vw;
+  margin-bottom: 4vw;
+
+}
+
+#genre {display:flex;
+  justify-content: center;
+
+ 
+}
+
+.genreicon {margin-left: 8vw;
+  margin-right: 8vw;
+  border-style: none;
+  border-radius: 150px;
+}
+
+
+/* index page added css */
+
+#canvas-section, #table-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#img-div {
+  display: flex;
+  align-items: center;
+  justify-content: column;
+}
+
+#my-image {
+  opacity: .6;
+}
+
+.table-h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin-top: 20px;
+}
+#storyLink, #homeFromProfile{
+  margin: auto;
+  color: black;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+/* added table-section and td styling */
+#table-section {
+  /* width: 70%; */
+  padding: 50px;
+  margin: auto;
+  /* text-align: center; */
+}
+
+th, td {
+  width: 70%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  font-size: 2.3vh;
+  
+}
+
+#shelf {
+  /* width: 50%; */
+  background-color: hsla(201, 100%, 14%, 0.6);
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  /* padding: 30px; */
+  background-image: url(/img/bookcover.png);
+  background-size: contain;
+  color: antiquewhite;
+}
+
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.styling, a, .bioDiv h3 {
+  font-family: Sacramento;
+}
+
+.bioDiv h3 {
+  font-weight: bold;
+  font-size: 3.6vh;
+  padding: 30px;
+
+}
+
+.bioDiv p {
+  font-family: 'Lucida Sans';
+  font-size: 2.3vh;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding-right: 50px;
+  color:white;
+  margin-right: 25px;
+}
+
+a:hover, #storyLink:hover, #homeFromProfile:hover {
+  color: #de6288;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 350px;
+  padding: 10px;
+  background-color: #003049;
+
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ad719a;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#authors {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#subscribe-div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+#email-btn {
+  margin-left: 10px;
+}
+
+#filler-text {
+  padding-right: 10px;
+}
+
+.bioName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  padding: 50px;
+  margin-left: 150px;
+}
+
+.imgDiv {
+  align-items: center;
+  width: 250px;
+    margin: 30px 30px 30px 0;
+    float: left;
+}
+.bioDiv {
+  font-size: 30px;
+  color:white;
+  display: inline;
+  background-color: hsla(201, 100%, 14%, 0.6);
+}
+
+.pic {
+  height: 13vw;
+  width: 13vw;
+}
+
+#storyDisplay {
+  width: 70%;
+  margin-left: 250px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#storyDisplay p {
+  width: inherit;
+  font-size: 3vh;
+  font-weight: bold;
+}

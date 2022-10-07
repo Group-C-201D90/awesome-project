@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>User Profile</title>
+</head>
+<body>
+<header>
+  <div id="logo">
+    <img src="img/storeyteller.jpg" width="150px" height="100px">
+    <h1 class="styling">"Story Not Story"</h1>
+  </div>
+  <nav>
+    <a href="https://group-c-201d90.github.io/awesome-project/">Home</a>
+    <a href="https://group-c-201d90.github.io/awesome-project/profile.html">Story</a>
+    <a href="https://group-c-201d90.github.io/awesome-project/bio.html">About Us</a>
+    
+  </nav>
+</header>
+  <section>
+    <form id="newUser">
+      <fieldset>
+
+        <label id="prof">Create a Writer's Profile</label><br>
+
+        <div class="label-div">
+          <label class="newUser">Enter Name:</label>
+          <input class="newUser" type="text" name="userName">
+        </div>
+        <div class="label-div">
+          <label class="newUser">Enter Age: &nbsp&nbsp</label>
+          <input class="newUser" type="text" name="userAge">
+        </div>
+        <div class="label-div">
+          <select name="pronoun" id="pronoun">
+            <option value="default">Select a pronoun</option>
+            <option value="his">he/him</option>
+            <option value="she">she/her</option>
+            <option value="they">they/them</option>
+            <option value="name">Use my Name!</option>
+          </select>
+        </div>    
+
+        <div class="button">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </fieldset>
+
+    </form>
+  </section>
+
+  <section id="pickgenre">
+<h2>PICK A GENRE AND GET STARTED</h2>
+  </section>
+
+  <article id="genre">
+<img id="FANTASY" class="genreicon" src="img/FANTASY.jpg" alt="FANTASY" width="200px" height="200px">
+<img id="SCI-FI" class="genreicon"  src="img/SCI-FI.jpg" alt="SCI-FI" width="200px" height="200px">
+<img id="HORROR" class="genreicon" src="img/4.jpg" alt="HORROR" width="200px" height="200px">
+<!-- There will be more genres we are striving for functionality before choices. -->
+  </article>
+  <section id="h2-section">
+    <h2 id="wyos">Write your own Story</h2>
+  </section>
+ 
+  <!-- STORY FORM -->
+  <section id="storyDisplay">
+    </section>
+    
+  <div id="selbar">
+    <form id="storyForm">
+      <fieldset>
+
+        <div id="storyNameForm">
+          <label id="newStoryDiv">Name Your Story</label><br>
+          <label class="newStory">Story Name:</label>
+          <input class="newStory" type="text" name="storyName">
+        </div>
+
+        <div id="storyNoun1">
+          <label id="noun1Div"></label><br>
+          <label class="noun1">What is something you really dislike?</label>
+          <input class="noun1" type="text" name="noun1">
+        </div>
+
+        <div id="storyAdj1">
+          <label id="adj1Div">Use a 1 word to describe your city.</label><br>
+          <label class="adj1">Adjective: </label>
+          <input class="adj1" type="text" name="adj1">
+        </div>
+
+        <div id="storyName1">
+          <label id="propDiv1">Who's someone you idolize?</label><br>
+          <label class="name1">Name of Person:</label>
+          <input class="name1" type="text" name="name1">
+        </div>
+
+
+
+        <div>
+          <select name="color" id="color">
+            <option value="default">Select a Color</option>
+            <option value="red">Red</option>
+            <option value="blue">Green</option>
+            <option value="green">Blue</option> 
+          </select>
+
+      <li class="button">
+        <button id="=storysubmit" type="submit">Submit</button>
+      </li>
+    </fieldset>
+  </form>
+
+</div>
+
+<a href="https://group-c-201d90.github.io/awesome-project/"><h2 id="homeFromProfile">
+  Bookshelf
+  </h2></a>
+</select>
+  <footer>
+    <div>
+      <p> Contact Us for More Updates</p>
+    </div>
+    <div id="authors">
+      <h2 class="styling"> Project &copy</h2>
+      <div class="circle"></div>
+      <p>Nicholas Seidel</p>
+      <div class="circle"></div>
+      <p>Zoe Gonzalez</p>
+      <div class="circle"></div>
+      <p>Hunter Fehr</p>
+      <div class="circle"></div>
+      <p>Nerissa Leynes</p>
+    </div>
+    <div id="subscribe-div">
+      <p id="filler-text">Subscribe Now!</p>
+      <input id="email-input" placeholder='Enter Your Email' />
+      <button id="email-btn">Sign-Up</button>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
