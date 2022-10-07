@@ -110,7 +110,7 @@ function storyPara(event) {
 
   let createdStory = randomcontent(storyName, noun1, adj1, name1, color);
   storyRender(createdStory);
-  // console.log(createdStory);
+
 
 }
 
