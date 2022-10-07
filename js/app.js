@@ -25,7 +25,7 @@ let userName = [];
 
 
 //**Place Holders!//\
-let genAdj1 = 'eerie';
+let genAdj1 = 'Boat';
 
 //Placeholder Selectors
 
