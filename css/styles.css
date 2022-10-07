@@ -308,3 +308,18 @@ footer {
   width: 13vw;
 }
 
+#storyDisplay {
+  width: 70%;
+  margin-left: 250px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#storyDisplay p {
+  width: inherit;
+  font-size: 3vh;
+  font-weight: bold;
+}
