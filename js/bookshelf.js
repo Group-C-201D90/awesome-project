@@ -18,20 +18,17 @@ for (let i = 0; i < bookShelf.length; i++) {
 
   tdElem.textContent = bookShelf[i].baseText;
   trElem.appendChild(tdElem);
-  
-  thElem.textContent = 'User';
+
+  thElem.textContent = bookShelf[i].userName;
   trElem2.appendChild(thElem);
 
   table.appendChild(trElem);
   table.appendChild(trElem2);
 }
-// console.log(bookShelf);
 
 function loadstorage() {
   let recallBook = localStorage.getItem('storedBooks');
   let recallProfile = localStorage.getItem('storedProfiles');
-  // console.log(recallBook);
-  // console.log(recallProfile);
   if (recallBook) {
     let makeBook = JSON.parse(recallBook);
 

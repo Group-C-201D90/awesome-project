@@ -1,5 +1,5 @@
 body {
-  background-image: url("/img/book.jpg");
+  background-image: url("img/book.jpg");
   font-family: raleway;
   margin: auto;
   height: 100%; 
