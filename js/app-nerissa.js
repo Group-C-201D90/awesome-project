@@ -18,6 +18,7 @@ function handleImageClicked(event) {
 
   if (imageArr[0] === clickedImg) {
     let genreindex = 0; // horror
+
   } else if(imageArr[1] === clickedImg) {
     let genreindex = 1; // fantasy
   } else if (imageArr[2] === clickedImg) {
