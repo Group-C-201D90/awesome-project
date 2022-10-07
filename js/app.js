@@ -100,8 +100,7 @@ function storyRender(createdStory){
 function storyPara(event) {
   event.preventDefault();
 
-  // let storyName = event.target.storyName.value;
-
+  let storyName = event.target.storyName.value;
   let noun1 = event.target.noun1.value;
   let adj1 = event.target.adj1.value;
   let name1 = event.target.name1.value;
@@ -109,7 +108,7 @@ function storyPara(event) {
 
 
 
-  let createdStory = randomcontent(noun1, adj1, name1, color);
+  let createdStory = randomcontent(storyName, noun1, adj1, name1, color);
   storyRender(createdStory);
   // console.log(createdStory);
 
@@ -122,7 +121,8 @@ function storyPara(event) {
 
 //**Stories**//
 
-function Story( genNoun1, noun1, genNoun2, genNoun3, genPlace1, adj1, genVerb1, name1, color) {
+function Story(storyName, genNoun1, noun1, genNoun2, genNoun3, genPlace1, adj1, genVerb1, name1, color) {
+  this.storyName =storyName;
   this.userName = userProfiles;
   this.genNoun1 = genNoun1;
   this.noun1 = noun1;
@@ -180,7 +180,7 @@ function randomIdx() {
 //Randomly picks a word and assigns it.
 
 
-function randomcontent(noun1input, adj1, name1, color) {
+function randomcontent(storyName, noun1input, adj1, name1, color) {
 
   let genNoun1 = noun1[randomIdx()];
   let genNoun2 = noun2[randomIdx()];
@@ -190,7 +190,7 @@ function randomcontent(noun1input, adj1, name1, color) {
 
   console.log(bookShelf);
 
-  let createdStory = new Story(genNoun1, noun1input, genNoun2, genNoun3, genPlace1, adj1, genVerb1, name1, color);
+  let createdStory = new Story(storyName, genNoun1, noun1input, genNoun2, genNoun3, genPlace1, adj1, genVerb1, name1, color);
   console.log(createdStory.content);
   console.log(bookShelf);
   return createdStory;

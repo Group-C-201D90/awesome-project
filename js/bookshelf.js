@@ -16,10 +16,10 @@ for (let i = 0; i < bookShelf.length; i++) {
   let thElem = document.createElement('th');
   let tdElem = document.createElement('td');
 
-  tdElem.textContent = bookShelf[i].baseText;
+  tdElem.textContent = bookShelf[i].storyName;
   trElem.appendChild(tdElem);
 
-  thElem.textContent = bookShelf[i].userName;
+  thElem.textContent = bookShelf[i].userName[i].name;
   trElem2.appendChild(thElem);
 
   table.appendChild(trElem);
