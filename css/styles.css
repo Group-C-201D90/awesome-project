@@ -153,6 +153,10 @@ h2  {display:flex;
   justify-content: column;
 }
 
+#my-image {
+  opacity: .6;
+}
+
 .table-h2 {
   display: flex;
   justify-content: center;
