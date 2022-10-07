@@ -26,7 +26,7 @@ let userName = [];
 
 //**Place Holders!//\
 let genAdj1 = 'eerie';
-let genreindex = 0;
+
 //Placeholder Selectors
 
 
@@ -80,6 +80,21 @@ function handleProfileSubmit(event) {
 }
 
 
+function storyRender(createdStory){
+
+  const wyos = document.getElementById('wyos');
+  wyos.remove();
+  //Adds the title picked from form
+  // let storyName = document.createElement('h2');
+  // storyName.textContent = story.storyName;
+  // storyDisplay.appendChild(storyName);
+  //Adds Content of the Story
+  let storyContent = document.createElement('p');
+  storyContent.textContent = createdStory.content;
+  console.log(`'!!',${createdStory.content}`);
+  storyDisplay.appendChild(storyContent);
+  randomIdx();
+}
 
 
 function storyPara(event) {
@@ -94,9 +109,8 @@ function storyPara(event) {
 
 
 
-  randomcontent(noun1, adj1, name1, color);
-
-  // storyRender(createdStory);
+  let createdStory = randomcontent(noun1, adj1, name1, color);
+  storyRender(createdStory);
   // console.log(createdStory);
 
 }
@@ -138,20 +152,6 @@ function Story( genNoun1, noun1, genNoun2, genNoun3, genPlace1, adj1, genVerb1, 
 //**Story Element Renderer
 
 
-function storyRender(story) {
-
-  const wyos = document.getElementById('wyos');
-  wyos.remove();
-  //Adds the title picked from form
-  // let storyName = document.createElement('h2');
-  // storyName.textContent = story.storyName;
-  // storyDisplay.appendChild(storyName);
-  //Adds Content of the Story
-  let storyContent = document.createElement('p');
-  storyContent.textContent = story.content;
-  storyDisplay.appendChild(storyContent);
-  randomIdx();
-}
 
 
 //**Word  Variables*//
@@ -193,7 +193,7 @@ function randomcontent(noun1input, adj1, name1, color) {
   let createdStory = new Story(genNoun1, noun1input, genNoun2, genNoun3, genPlace1, adj1, genVerb1, name1, color);
   console.log(createdStory.content);
   console.log(bookShelf);
-
+  return createdStory;
 }
 
 //!!END WORD DEFINERS//
