@@ -86,7 +86,21 @@ button:active {
 }
 
 
+.bioE {background-color: hsla(201, 100%, 14%, 0.6);
+  color: white;
+  display:flex;
+  justify-content: center;
+  margin-top: 10vw;
+  list-style: none;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: 'sans-serif'
 
+
+
+}
 
 
 #enterStyle {display: flex;
@@ -288,6 +302,8 @@ footer {
 }
 
 .pic {
-  height: 13vw;
+  height: 17vw;
   width: 13vw;
+  border-radius: 
+  
 }
