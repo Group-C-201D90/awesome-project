@@ -147,12 +147,10 @@ h2  {display:flex;
   margin-top: 20px;
 }
 
-#canvas-div {
+#img-div {
   display: flex;
   align-items: center;
   justify-content: column;
-  background-color: darkgray;
-  width: 500px;
 }
 
 .table-h2 {
@@ -212,11 +210,14 @@ th, td {
 .bioDiv h3 {
   font-weight: bold;
   font-size: 3.6vh;
+  padding: 30px;
+
 }
 
 .bioDiv p {
   font-family: 'Lucida Sans';
   font-size: 2.3vh;
+  padding: 20px;
 }
 
 a {
